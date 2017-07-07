@@ -1,5 +1,5 @@
 # xlsx_issue_demo
-Small, Simple Demo Program for @tealeg/xlsx Issue #???
+Small, Simple Demo Program for @tealeg/xlsx Issue #312
 
 ## My Understanding of the Problem
 
