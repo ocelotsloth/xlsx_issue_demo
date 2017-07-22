@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tealeg/xlsx"
+	"github.com/ocelotsloth/xlsx"
 )
 
 // Attempts to open an excel file and locate the header. The test fails if the
@@ -33,5 +33,5 @@ func main() {
 	fmt.Printf("%s opened successfully.\n", file)
 
 	// If you got here, all is well.
-	fmt.Printf("Hey it worked, here's proof: %s is the name of sheet 0.", xlFile.Sheets[0].Name)
+	fmt.Printf("Hey it worked, here's proof: %s is the name of sheet 0.\n\n", xlFile.Sheets[0].Name)
 }
