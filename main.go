@@ -35,8 +35,12 @@ func main() {
 	// If you got here, all is well.
 	fmt.Printf("Hey it worked, here's proof: %s is the name of sheet 0.\n", xlFile.Sheets[0].Name)
 	mc1Value, e := xlFile.Sheets[0].Cell(1, 1).FormattedValue()
+	mc1HMerge := xlFile.Sheets[0].Cell(1, 1).HMerge
+	mc1VMerge := xlFile.Sheets[0].Cell(1, 1).VMerge
 	if e != nil {
 		panic(e)
 	}
 	fmt.Printf("\tCell B2 Value: \"%s\"\n", mc1Value)
+	fmt.Printf("\tCell B2 HMerge: \"%d\"\n", mc1HMerge)
+	fmt.Printf("\tCell B2 VMerge: \"%d\"\n", mc1VMerge)
 }
