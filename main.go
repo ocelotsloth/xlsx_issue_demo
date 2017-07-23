@@ -33,5 +33,10 @@ func main() {
 	fmt.Printf("%s opened successfully.\n", file)
 
 	// If you got here, all is well.
-	fmt.Printf("Hey it worked, here's proof: %s is the name of sheet 0.\n\n", xlFile.Sheets[0].Name)
+	fmt.Printf("Hey it worked, here's proof: %s is the name of sheet 0.\n", xlFile.Sheets[0].Name)
+	mc1Value, e := xlFile.Sheets[0].Cell(1, 1).FormattedValue()
+	if e != nil {
+		panic(e)
+	}
+	fmt.Printf("\tCell B2 Value: \"%s\"\n", mc1Value)
 }
